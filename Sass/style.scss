@@ -9,7 +9,7 @@ body{
     align-items: center;
     font-family: variables.$font;
     background-color: #f0f0f0;
-    
+    z-index: -12;
 }
 
 
@@ -20,6 +20,7 @@ body{
     position: absolute;
     top: 0;
     justify-content: space-between;
+    z-index: -8;
     .cerrar-menu{
         display: none;
     }
@@ -85,7 +86,7 @@ body{
 .imagen-mobile{
     width: 100vw;
     height: 100%;
-    
+    z-index: -10;
 }
 
 
@@ -285,8 +286,24 @@ body{
     }
 }
 
+
 .back-project{
+    .capa{
+        
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        left: -20px;
+        top: -140px;
+        z-index: -1;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        display: flex;
+    }
+    
+    position:absolute;
+    top: 130px;
     @include mixins.fondo;
+    display: none;
     align-items:start;
     .titulo-back{
         display: flex;
@@ -325,8 +342,6 @@ body{
             margin: 10px 0;
             display: flex;
             #seleccion{
-                border-radius: 50%;
-                color: red;
                 margin-right: 20px;
                 width: 20px;
                 height: 20px;
@@ -342,7 +357,12 @@ body{
         
         }
     }
-
+    .desabilitado{
+        *{opacity: 0.6;}
+        button{
+            background-color: gray;
+        }
+    }
     .elegir{
         padding: 20px;
         display: flex;
@@ -404,9 +424,9 @@ body{
                 font-weight: normal;
             }
         }
-
+        
         .seleccionado{
-            display: flex;
+            display: none;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -418,14 +438,65 @@ body{
             }
 
             .opciones{
+                width: 100%;
                 .texto-opciones{
-                    font-size: 0.1em;
-                    font-family: varibales.$font;
+                    margin: 20px auto;
+                    p{
+                        text-align: center;
+                        font-size: 0.8em;
+                        font-weight: 500;
+                        font-family: variables.$font;
+                        color: variables.$Dark-gray
+                    }
+                }
+
+                .botones-opciones{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    position: relative;
+                    .precio{
+                        
+                        border-radius: 40px;
+                        border: none;
+                        border: 1px solid rgba($color: #000000, $alpha: 0.2);
+                        padding-left: 50px;
+                        width: 100px;
+                        height: 50px;
+                        position: relative;
+                        color: #000000;
+                        font-family: variables.$font;
+                        font-weight: 700;
+                        outline: none;
+                        
+                    }
+                    
+                    .signo{
+                        position:absolute;
+                        margin-right:170px ;
+                        top: 4px;
+                        font-family: variables.$font;
+                        z-index: 10;
+                    }
+
+                    button{
+                        padding: 15px 30px;
+                        border-radius: 30px;
+                        border: none;
+                        background-color: variables.$Moderate-cyan;
+                        color: white;
+                        font-family: variables.$font;
+                        font-weight: 500;
+                    }
                 }
             }
+
         }
     }
 
 }
+
+
 
 

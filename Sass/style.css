@@ -12,6 +12,7 @@ body {
   align-items: center;
   font-family: "Commissioner", sans-serif;
   background-color: #f0f0f0;
+  z-index: -12;
 }
 
 .nav {
@@ -21,6 +22,7 @@ body {
   position: absolute;
   top: 0;
   justify-content: space-between;
+  z-index: -8;
 }
 .nav .cerrar-menu {
   display: none;
@@ -80,6 +82,7 @@ body {
 .imagen-mobile {
   width: 100vw;
   height: 100%;
+  z-index: -10;
 }
 
 .container {
@@ -97,7 +100,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 10px;
   gap: 10px;
   background-color: white;
   width: 90%;
@@ -146,7 +149,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 10px;
   gap: 10px;
   background-color: white;
   width: 90%;
@@ -192,7 +195,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 10px;
   gap: 10px;
   background-color: white;
   width: 90%;
@@ -272,16 +275,29 @@ body {
 }
 
 .back-project {
+  position: absolute;
+  top: 130px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 10px;
   gap: 10px;
   background-color: white;
   width: 90%;
   padding: 20px;
+  display: none;
   align-items: start;
+}
+.back-project .capa {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  left: -20px;
+  top: -140px;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
 }
 .back-project .titulo-back {
   display: flex;
@@ -320,8 +336,6 @@ body {
   display: flex;
 }
 .back-project .pledge .sec-1 #seleccion {
-  border-radius: 50%;
-  color: red;
   margin-right: 20px;
   width: 20px;
   height: 20px;
@@ -333,6 +347,12 @@ body {
   font-size: 0.9em;
   line-height: 1.5;
   margin: 10px 40px 5px 0;
+}
+.back-project .desabilitado * {
+  opacity: 0.6;
+}
+.back-project .desabilitado button {
+  background-color: gray;
 }
 .back-project .elegir {
   padding: 20px;
@@ -395,7 +415,7 @@ body {
   font-weight: normal;
 }
 .back-project .elegir .seleccionado {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -406,6 +426,52 @@ body {
   height: 0.01em;
   color: rgba(0, 0, 0, 0.1);
 }
-.back-project .elegir .seleccionado .opciones .texto {
-  font-size: 0.9em;
+.back-project .elegir .seleccionado .opciones {
+  width: 100%;
+}
+.back-project .elegir .seleccionado .opciones .texto-opciones {
+  margin: 20px auto;
+}
+.back-project .elegir .seleccionado .opciones .texto-opciones p {
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 500;
+  font-family: "Commissioner", sans-serif;
+  color: hsl(0, 0%, 48%);
+}
+.back-project .elegir .seleccionado .opciones .botones-opciones {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.back-project .elegir .seleccionado .opciones .botones-opciones .precio {
+  border-radius: 40px;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-left: 50px;
+  width: 100px;
+  height: 50px;
+  position: relative;
+  color: #000000;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 700;
+  outline: none;
+}
+.back-project .elegir .seleccionado .opciones .botones-opciones .signo {
+  position: absolute;
+  margin-right: 170px;
+  top: 4px;
+  font-family: "Commissioner", sans-serif;
+  z-index: 10;
+}
+.back-project .elegir .seleccionado .opciones .botones-opciones button {
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  background-color: hsl(176, 50%, 47%);
+  color: white;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
