@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Commissioner", sans-serif;
+  background-color: #f0f0f0;
+}
+
+.nav {
+  padding: 40px 30px;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  justify-content: space-between;
+}
+.nav .cerrar-menu {
+  display: none;
+}
+.nav .hamburgesa {
+  width: 15px;
+  height: 15px;
+}
+.nav .logo {
+  height: 15px;
+}
+.nav .menu-desktop {
+  display: none;
+}
+.nav .menu-mobile {
+  display: none;
+  flex-direction: column;
+  width: 80%;
+  position: absolute;
+  top: 80px;
+  left: 10%;
+  text-align: left;
+  background-color: gray;
+  border-radius: 7px;
+  z-index: 10;
+}
+.nav .menu-mobile a {
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+  font-family: "Commissioner", sans-serif;
+  font-weight: 500;
+  padding: 15px;
+  background-color: white;
+  margin-bottom: 1px;
+}
+.nav .menu-mobile .uno {
+  border-radius: 7px 7px 0 0;
+}
+.nav .menu-mobile .tres {
+  border-radius: 0 0 7px 7px;
+  margin-bottom: 0;
+}
+.nav .menu-mobile .capa {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: -80px;
+  left: -13%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.imagen-desktop {
+  display: none;
+}
+
+.imagen-mobile {
+  width: 100vw;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  position: relative;
+  gap: 30px;
+}
+.container .principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  gap: 10px;
+  background-color: white;
+  width: 90%;
+  padding: 20px;
+  position: absolute;
+  display: flex;
+  top: -30px;
+}
+.container .principal .principal_logo {
+  position: absolute;
+  top: -25px;
+}
+.container .principal h1 {
+  text-align: center;
+  font-size: 1.2em;
+  margin: 20px 20px 5px 20px;
+  color: hsl(0, 0%, 0%);
+}
+.container .principal p {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.8em;
+  margin: 0 10px 0 10px;
+  color: hsl(0, 0%, 48%);
+}
+.container .principal .botonera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.container .principal .botonera button {
+  padding: 15px 50px;
+  border-radius: 50px;
+  border: none;
+  font-family: "Commissioner", sans-serif;
+  color: white;
+  background-color: hsl(176, 50%, 47%);
+}
+.container .principal .botonera .bookmark p {
+  display: none;
+}
+.container .segunda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  gap: 10px;
+  background-color: white;
+  width: 90%;
+  padding: 20px;
+  position: absolute;
+  text-align: center;
+  top: 240px;
+}
+.container .segunda .estadisticas {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .segunda .estadisticas h2 {
+  font-size: 1.3em;
+}
+.container .segunda .estadisticas p {
+  font-size: 0.7em;
+  color: hsl(0, 0%, 48%);
+  margin-top: 7px;
+}
+.container .segunda .estadisticas hr {
+  width: 50px;
+  height: 1px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+.container .segunda .barra {
+  margin: 30px 0;
+  width: 90%;
+  height: 10px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 20px;
+}
+.container .segunda .barra .color-barra {
+  width: 80%;
+  height: 10px;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 20px;
+}
+.container .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  gap: 10px;
+  background-color: white;
+  width: 90%;
+  padding: 20px;
+  position: absolute;
+  top: 600px;
+  align-items: start;
+  padding: 35px;
+}
+.container .about h3 {
+  color: hsl(0, 0%, 0%);
+  margin: 20px 0;
+}
+.container .about p {
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: hsl(0, 0%, 48%);
+  margin-right: 12px;
+}
+.container .about .secciones-about {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.container .about .secciones-about .titulo h3 {
+  font-size: 0.9em;
+}
+.container .about .secciones-about .titulo p {
+  color: hsl(176, 50%, 47%);
+  font-weight: 700;
+  margin-top: -15px;
+}
+.container .about .secciones-about .texto {
+  margin: 15px 0;
+  font-weight: 500;
+  color: hsl(0, 0%, 48%);
+  font-size: 1em;
+}
+.container .about .secciones-about .foot {
+  margin: 20px 0;
+}
+.container .about .secciones-about .foot .foot-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.container .about .secciones-about .foot .foot-text p {
+  color: hsl(0, 0%, 0%);
+  font-size: 1.8em;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+}
+.container .about .secciones-about .foot .foot-text .left {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: hsl(0, 0%, 48%);
+  margin-left: -5px;
+}
+.container .about .secciones-about button {
+  margin: 20px 0;
+  margin-bottom: 1px;
+  padding: 15px 35px;
+  font-size: 0.8em;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 500;
+  color: white;
+  background-color: hsl(176, 50%, 47%);
+  border: none;
+  border-radius: 40px;
+}
+.container .about .desabilitado * {
+  opacity: 0.6;
+}
+.container .about .desabilitado button {
+  background-color: gray;
+}
+
+.back-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  gap: 10px;
+  background-color: white;
+  width: 90%;
+  padding: 20px;
+  align-items: start;
+}
+.back-project .titulo-back {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+.back-project .titulo-back h2 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.back-project .titulo-back img {
+  width: 13px;
+  height: 13px;
+}
+.back-project p {
+  text-align: left;
+  color: hsl(0, 0%, 48%);
+  font-size: 0.9em;
+  padding: 0;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+.back-project .pledge {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.back-project .pledge .sec-1 {
+  margin: 10px 0;
+  display: flex;
+}
+.back-project .pledge .sec-1 #seleccion {
+  border-radius: 50%;
+  color: red;
+  margin-right: 20px;
+  width: 20px;
+  height: 20px;
+}
+.back-project .pledge .sec-1 h3 {
+  font-size: 0.9em;
+}
+.back-project .pledge .texto {
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin: 10px 40px 5px 0;
+}
+.back-project .elegir {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.back-project .elegir .sec-1 {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back-project .elegir .sec-1 #seleccion {
+  border-radius: 50%;
+  color: red;
+  margin-right: 20px;
+  width: 20px;
+  height: 20px;
+}
+.back-project .elegir .sec-1 .txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 5px 0;
+}
+.back-project .elegir .sec-1 .txt h3 {
+  font-size: 0.9em;
+  margin-bottom: -3px;
+}
+.back-project .elegir .sec-1 .txt .valor-span {
+  color: hsl(176, 50%, 47%);
+  font-size: 0.7em;
+  margin-bottom: -3px;
+  font-weight: 600;
+}
+.back-project .elegir .texto {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 5px 20px 5px 0;
+}
+.back-project .elegir .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back-project .elegir .left p {
+  font-size: 0.9em;
+  color: #000000;
+  margin-right: 5px;
+  font-weight: 600;
+}
+.back-project .elegir .left .dias {
+  color: hsl(0, 0%, 48%);
+  font-size: 0.7em;
+  font-weight: normal;
+}
+.back-project .elegir .seleccionado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.back-project .elegir .seleccionado hr {
+  width: 116%;
+  height: 0.01em;
+  color: rgba(0, 0, 0, 0.1);
+}
+.back-project .elegir .seleccionado .opciones .texto {
+  font-size: 0.9em;
+}/*# sourceMappingURL=style.css.map */

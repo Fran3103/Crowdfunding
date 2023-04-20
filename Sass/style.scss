@@ -1,0 +1,431 @@
+@use 'variables';
+@use 'reload';
+@use 'mobile';
+@use 'mixins';
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: variables.$font;
+    background-color: #f0f0f0;
+    
+}
+
+
+.nav{
+    padding: 40px 30px;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    justify-content: space-between;
+    .cerrar-menu{
+        display: none;
+    }
+    .hamburgesa{
+        width: 15px;
+        height: 15px;
+    }
+    .logo{
+        height: 15px;
+    }
+    .menu-desktop{
+        display: none;
+    }
+    .menu-mobile{
+        display: none;
+        flex-direction: column;
+        width: 80%;
+        position: absolute;
+        top: 80px;
+        left: 10%;
+        text-align: left;
+        // padding: 18px;
+        background-color: gray;
+        border-radius: 7px;
+        z-index: 10;
+        a{
+            text-decoration: none;
+            color: variables.$Black;
+            font-family: variables.$font;
+            font-weight: 500;
+            padding: 15px;
+            background-color: white;
+            margin-bottom: 1px;
+            
+        }
+        .uno{
+            border-radius: 7px 7px 0 0;
+        }
+        .tres{
+            border-radius: 0 0 7px 7px;
+            margin-bottom: 0;
+        }
+
+        .capa{
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: -80px;
+            left: -13%;
+            z-index: -1;
+            background-color: rgba($color: #000000, $alpha: 0.2);
+        }
+        }
+    
+
+
+}
+
+.imagen-desktop{
+    display: none;
+}
+
+.imagen-mobile{
+    width: 100vw;
+    height: 100%;
+    
+}
+
+
+.container{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: gray;
+    position: relative;
+    gap: 30px;
+    
+    
+    .principal{
+        
+        @include mixins.fondo;
+        position:absolute;
+        display: flex;
+        
+        top: -30px;
+        .principal_logo{
+            position: absolute;
+            top: -25px;
+        }
+
+        h1{
+            
+            text-align: center;
+            font-size: 1.2em;
+            margin: 20px 20px 5px 20px;
+            color: variables.$Black;
+        }
+        p{
+            text-align: center;
+            line-height: 1.5;
+            font-size: 0.8em;
+            margin: 0 10px 0 10px;
+            color: variables.$Dark-gray;
+
+        }
+
+        .botonera{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+
+            button{
+                padding: 15px 50px;
+                border-radius: 50px;
+                border: none;
+                font-family: variables.$font;
+                color: white;
+                background-color: variables.$Moderate-cyan;
+            }
+            .bookmark{
+
+                p{
+                    display: none;;
+                }
+            }
+        }
+    
+    }
+
+    .segunda{
+        
+        @include mixins.fondo;
+        
+        position: absolute;
+        text-align: center;
+        top: 240px;
+        .estadisticas{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h2{
+                font-size: 1.3em;
+            }
+
+            p{
+                font-size: 0.7em;
+                color: variables.$Dark-gray;
+                margin-top: 7px;
+            }
+
+            hr{
+                width: 50px;
+                height: 1px;
+                border: 1px solid rgba($color: #000000, $alpha: 0.1);
+                margin: 0 auto;
+            }
+        }
+
+        .barra{
+            margin: 30px 0;
+            width: 90%;
+            height: 10px;
+            background-color: rgb(230, 230, 230);
+            border-radius: 20px;
+            .color-barra{
+                width: 80%;
+                height: 10px;
+                background-color: variables.$Moderate-cyan;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    .about{
+        @include mixins.fondo;
+        position:absolute;
+        top: 600px;
+        align-items: start;
+        padding: 35px;
+        h3{
+            color: variables.$Black;
+            margin: 20px 0;
+        }
+        p{
+            font-size: 0.8em;
+            line-height: 1.5;
+            color: variables.$Dark-gray;
+            margin-right: 12px;
+        }
+
+        .secciones-about{
+            margin: 10px 0;
+            padding: 10px 20px;
+            border: 1px solid rgba($color: #000000, $alpha: 0.2);
+            border-radius: 10px;
+            .titulo{
+                h3{
+                    font-size: 0.9em;
+                }
+                p{
+                    color: variables.$Moderate-cyan;
+                    font-weight: 700;
+                    margin-top: -15px;
+                }
+            }
+
+            .texto{
+                margin: 15px 0;
+                font-weight: 500;
+                color: variables.$Dark-gray;
+                font-size: 1em;
+                
+            }
+
+            .foot{
+                margin: 20px 0;
+                .foot-text{
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    p{
+                        color: variables.$Black;
+                        font-size: 1.8em;
+                        font-weight: 700;
+                        font-family: variables.$font;
+                        
+                    }
+                    .left{
+                        font-size: 0.8em;
+                        font-weight: 500;
+                        color: variables.$Dark-gray;
+                        margin-left: -5px;
+                        
+                    }
+                }
+            }
+            button{
+                margin: 20px 0;
+                margin-bottom: 1px;
+                padding: 15px 35px;
+                font-size: 0.8em;
+                font-family: variables.$font;
+                font-weight: 500;
+                color: white;
+                background-color: variables.$Moderate-cyan;
+                border: none;
+                border-radius: 40px;
+            }
+            
+        }
+
+        .desabilitado{
+            *{opacity: 0.6;}
+            button{
+                background-color: gray;
+            }
+        }
+    }
+}
+
+.back-project{
+    @include mixins.fondo;
+    align-items:start;
+    .titulo-back{
+        display: flex;
+        width: 100%;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        h2{
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        img{
+            width: 13px;
+            height: 13px;
+        }
+    }
+    p{
+        text-align: left;
+        color: variables.$Dark-gray;
+        font-size: 0.9em;
+        padding: 0;
+        margin: 10px 0;
+        
+        line-height: 1.5;
+    }
+
+    .pledge{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        border: 1px solid rgba($color: #000000, $alpha: 0.3);
+        border-radius: 10px;
+        .sec-1{
+            margin: 10px 0;
+            display: flex;
+            #seleccion{
+                border-radius: 50%;
+                color: red;
+                margin-right: 20px;
+                width: 20px;
+                height: 20px;
+            }
+            h3{
+                font-size: 0.9em;
+            }
+        }
+        .texto{
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin: 10px 40px 5px 0;
+        
+        }
+    }
+
+    .elegir{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        border: 1px solid rgba($color: #000000, $alpha: 0.3);
+        border-radius: 10px;
+        .sec-1{
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #seleccion{
+                border-radius: 50%;
+                color: red;
+                margin-right: 20px;
+                width: 20px;
+                height: 20px;
+            }
+            .txt{
+                display: flex;
+                flex-direction: column;
+                justify-content:center;
+                align-items: start;
+                padding: 5px 0;
+                h3{
+                    font-size: 0.9em;
+                    margin-bottom: -3px;
+                }
+                .valor-span{
+                    color: variables.$Moderate-cyan;
+                    font-size: 0.7em;
+                    margin-bottom: -3px;
+                    font-weight: 600;
+                    
+                }
+            }
+            
+        }
+        .texto{
+            font-size: 1em;
+            line-height: 1.5;
+            margin: 5px 20px 5px 0;
+        }
+        .left{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                font-size: 0.9em;
+                color: #000000;
+                margin-right: 5px;
+                font-weight: 600;
+            }
+            .dias{
+                color: variables.$Dark-gray;
+                font-size: 0.7em;
+                font-weight: normal;
+            }
+        }
+
+        .seleccionado{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            hr{
+                width: 116%;
+                height: 0.01em;
+                color: rgba($color: #000000, $alpha: 0.1);
+            }
+
+            .opciones{
+                .texto-opciones{
+                    font-size: 0.1em;
+                    font-family: varibales.$font;
+                }
+            }
+        }
+    }
+
+}
+
+
