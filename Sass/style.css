@@ -12,7 +12,6 @@ body {
   align-items: center;
   font-family: "Commissioner", sans-serif;
   background-color: #f0f0f0;
-  z-index: -12;
 }
 
 .nav {
@@ -22,7 +21,6 @@ body {
   position: absolute;
   top: 0;
   justify-content: space-between;
-  z-index: -8;
 }
 .nav .cerrar-menu {
   display: none;
@@ -65,15 +63,6 @@ body {
   border-radius: 0 0 7px 7px;
   margin-bottom: 0;
 }
-.nav .menu-mobile .capa {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: -80px;
-  left: -13%;
-  z-index: -1;
-  background-color: rgba(0, 0, 0, 0.2);
-}
 
 .imagen-desktop {
   display: none;
@@ -82,15 +71,15 @@ body {
 .imagen-mobile {
   width: 100vw;
   height: 100%;
-  z-index: -10;
 }
 
 .container {
   width: 100%;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: -50px;
   background-color: gray;
   position: relative;
   gap: 30px;
@@ -287,17 +276,8 @@ body {
   width: 90%;
   padding: 20px;
   display: none;
+  z-index: 10;
   align-items: start;
-}
-.back-project .capa {
-  width: 100vw;
-  height: 100%;
-  position: absolute;
-  left: -20px;
-  top: -140px;
-  z-index: -1;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
 }
 .back-project .titulo-back {
   display: flex;
@@ -474,4 +454,54 @@ body {
   color: white;
   font-family: "Commissioner", sans-serif;
   font-weight: 500;
+}
+
+.alerta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  gap: 10px;
+  background-color: white;
+  width: 90%;
+  padding: 20px;
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 130px;
+}
+.alerta img {
+  margin: 10px 0;
+}
+.alerta h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.alerta p {
+  text-align: center;
+  line-height: 1.6;
+  font-size: 0.9em;
+  color: hsl(0, 0%, 48%);
+}
+.alerta button {
+  margin: 20px 0;
+  padding: 15px 35px;
+  border-radius: 30px;
+  border: none;
+  background-color: hsl(176, 50%, 47%);
+  color: white;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 500;
+}
+
+.capa {
+  width: 100%;
+  height: 2400px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
 }/*# sourceMappingURL=style.css.map */

@@ -9,7 +9,7 @@ body{
     align-items: center;
     font-family: variables.$font;
     background-color: #f0f0f0;
-    z-index: -12;
+    
 }
 
 
@@ -20,7 +20,7 @@ body{
     position: absolute;
     top: 0;
     justify-content: space-between;
-    z-index: -8;
+    
     .cerrar-menu{
         display: none;
     }
@@ -64,15 +64,7 @@ body{
             margin-bottom: 0;
         }
 
-        .capa{
-            width: 100vw;
-            height: 100vh;
-            position: absolute;
-            top: -80px;
-            left: -13%;
-            z-index: -1;
-            background-color: rgba($color: #000000, $alpha: 0.2);
-        }
+        
         }
     
 
@@ -86,17 +78,17 @@ body{
 .imagen-mobile{
     width: 100vw;
     height: 100%;
-    z-index: -10;
+    
 }
 
 
 .container{
     width: 100%;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    margin-top: -50px;
     background-color: gray;
     position: relative;
     gap: 30px;
@@ -288,24 +280,16 @@ body{
 
 
 .back-project{
-    .capa{
-        
-        width: 100vw;
-        height: 100%;
-        position: absolute;
-        left: -20px;
-        top: -140px;
-        z-index: -1;
-        background-color: rgba($color: #000000, $alpha: 0.6);
-        display: flex;
-    }
+    
     
     position:absolute;
     top: 130px;
     @include mixins.fondo;
     display: none;
+    z-index: 10;
     align-items:start;
     .titulo-back{
+        
         display: flex;
         width: 100%;
         flex-direction: row-reverse;
@@ -495,6 +479,52 @@ body{
         }
     }
 
+}
+
+.alerta{
+    @include mixins.fondo;
+    display: none;
+    position:absolute;
+    z-index: 10;
+    top: 130px;
+    img{
+        margin: 10px 0;
+    }
+
+    h3{
+        font-size: 1.2em;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+    p{
+        text-align: center;
+        line-height: 1.6;
+        font-size: 0.9em;
+        color: variables.$Dark-gray;
+    }
+    
+    button{
+        margin: 20px 0;
+        padding: 15px 35px;
+        border-radius: 30px;
+        border: none;
+        background-color: variables.$Moderate-cyan;
+        color: white;
+        font-family: variables.$font;
+        font-weight: 500;
+    }
+    
+}
+.capa{
+    
+    width: 100%;
+    height: 2400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    display: none;
 }
 
 
