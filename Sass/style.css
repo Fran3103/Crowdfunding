@@ -25,6 +25,7 @@ body {
 .nav .cerrar-menu {
   display: none;
   cursor: pointer;
+  z-index: 10;
 }
 .nav .hamburgesa {
   width: 15px;
@@ -149,6 +150,9 @@ body {
 .container .principal .botonera .bookmarked {
   display: none;
 }
+.container .principal .botonera .bookmarkedOff {
+  display: flex;
+}
 .container .principal .botonera .bookmarked-sel {
   transition: all 5ms ease-in;
 }
@@ -223,7 +227,7 @@ body {
   width: 90%;
   padding: 20px;
   position: absolute;
-  top: 600px;
+  top: 620px;
   align-items: start;
   padding: 35px;
 }
@@ -515,6 +519,12 @@ body {
 .back-project .elegir .seleccionado .opciones .botones-opciones button:hover {
   background-color: hsl(176, 72%, 28%);
 }
+.back-project .activo {
+  border-color: hsl(176, 50%, 47%);
+}
+.back-project .activo .seleccionado {
+  display: flex;
+}
 
 .alerta {
   display: flex;
@@ -562,7 +572,7 @@ body {
 
 .capa {
   width: 100%;
-  height: 2000px;
+  height: 2100px;
   position: absolute;
   left: 0;
   top: 0;
@@ -570,6 +580,35 @@ body {
   display: none;
 }
 
+@media screen and (min-width: 460px) {
+  .container {
+    margin-top: -100px;
+  }
+  .container .segunda {
+    margin-top: -40px;
+  }
+  .container .about {
+    margin-top: -30px;
+  }
+}
+@media screen and (min-width: 560px) {
+  .container {
+    margin-top: 10px;
+  }
+  .container .segunda {
+    margin-top: -50px;
+  }
+  .container .about {
+    margin-top: -40px;
+  }
+  .imagen-mobile {
+    display: none;
+  }
+  .imagen-desktop {
+    display: flex;
+    width: 100%;
+  }
+}
 @media screen and (min-width: 760px) {
   .nav {
     align-items: center;
@@ -596,13 +635,6 @@ body {
   }
   .nav .menu-desktop a:hover {
     text-shadow: 0 0 10px white;
-  }
-  .imagen-mobile {
-    display: none;
-  }
-  .imagen-desktop {
-    display: flex;
-    width: 100%;
   }
   .container {
     max-width: 760px;
@@ -668,6 +700,7 @@ body {
     display: flex;
   }
   .container .segunda {
+    margin-top: 10px;
     text-align: left;
     justify-content: start;
   }
@@ -697,7 +730,7 @@ body {
     height: 15px;
   }
   .container .about {
-    top: 490px;
+    top: 550px;
   }
   .container .about h3 {
     font-size: 1.5em;
@@ -820,7 +853,7 @@ body {
     display: none;
   }
   .back-project .elegir .seleccionado {
-    display: flex;
+    display: none;
     width: 100%;
   }
   .back-project .elegir .seleccionado hr {
@@ -853,6 +886,12 @@ body {
   }
   .back-project .elegir .seleccionado .opciones .botones-opciones button {
     font-size: 1em;
+  }
+  .back-project .activo {
+    border-color: hsl(176, 50%, 47%);
+  }
+  .back-project .activo .seleccionado {
+    display: flex;
   }
   .alerta {
     display: none;
