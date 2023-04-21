@@ -44,9 +44,9 @@
       <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
 
       <div class="botonera">
-        <button>Back this project</button>
+        <button class="back-btn">Back this project</button>
         <div class="bookmark ">
-          <img src="/images/icon-bookmark.svg" alt="Bookmark">
+          <img src="/images/icon-bookmark.svg" class="bookmarkedOff" alt="Bookmark">
           <img src="/images/icon-bookmark copy.svg" class="bookmarked" alt="bookmarked">
           <p>Bookmark</p>
           <p class="book-sel">Bookmarked</p>
@@ -118,7 +118,7 @@
             </p>
           </div>
           
-          <button>
+          <button class="selec-bambo btn-about" id="bamboo">
             Select Reward
           </button>
         </div>
@@ -146,7 +146,7 @@
               left
             </p>
           </div>
-          <button>
+          <button class="selec-black btn-about" id="black">
             Select Reward
           </button>
         </div>
@@ -187,15 +187,15 @@
   <div class="back-project">
     
     <div class="titulo-back">
-      <img src="/images/icon-close-modal.svg" alt="close-modal">
+      <img src="/images/icon-close-modal.svg" alt="close-modal" class="cerrar-modal">
     <h2>Back this project</h2>
     </div>
     <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
 
-    <div class="pledge">
+    <div class="pledge selec">
       
       <div class="sec-1">
-        <input type="radio"  name="selccion" id="seleccion">
+        <input type="radio"  name="selccion" class="ratio" id="seleccion">
         <h3>Pledge with no reward</h3>
       </div>
 
@@ -208,10 +208,10 @@
 
     </div>
 
-    <div class="bamboo-seccion elegir">
+    <div class="bamboo-seccion selec elegir ">
 
       <div class="sec-1">
-        <input type="radio" name="selccion" id="seleccion">
+        <input type="radio" name="selccion" id="seleccion" class="selec-bambo ratio">
         <div class="txt">
           <h3>Bamboo Stand </h3>
           <p class="valor-span">Pledge $25 or more</p>
@@ -243,16 +243,16 @@
           <div class="botones-opciones">
             <p class="signo">$</p>
             <input type="text" class="precio" placeholder="25" value="25">
-            <button>Continue</button>
+            <button class="continuar">Continue</button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="black-seccion elegir">
+    <div class="black-seccion  selec elegir">
 
       <div class="sec-1">
-        <input type="radio" name="selccion" id="seleccion">
+        <input type="radio" name="selccion" class="selec-black ratio" id="seleccion">
         <div class="txt">
           <h3>Black Edition Stand </h3>
           <p class="valor-span">Pledge $75 or more</p>
@@ -284,7 +284,7 @@
           <div class="botones-opciones">
             <p class="signo">$</p>
             <input type="text" class="precio" placeholder="75" value="75">
-            <button>Continue</button>
+            <button class="continuar">Continue</button>
           </div>
         </div>
       </div>
@@ -340,9 +340,11 @@
       Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
       an email once our campaign is completed.
     </p>
-    <button>Got it!</button>
+    <button class="go">Got it!</button>
     
   </div>
   <div class="capa"></div>
+
+  <script src="/main.js"></script>
 </body>
 </html>
