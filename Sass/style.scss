@@ -378,7 +378,7 @@ body{
         .sec-1{
             margin: 10px 0;
             display: flex;
-            #seleccion{
+            .ratio{
                 margin-right: 20px;
                 width: 20px;
                 height: 20px;
@@ -421,7 +421,7 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
-            #seleccion{
+            .ratio{
                 border-radius: 50%;
                 color: red;
                 margin-right: 20px;
