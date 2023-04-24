@@ -153,11 +153,9 @@ body {
 .container .principal .botonera .bookmarkedOff {
   display: flex;
 }
-.container .principal .botonera .bookmarked-sel {
-  transition: all 5ms ease-in;
-}
 .container .principal .botonera .bookmarked-sel p {
-  display: none;
+  display: flex;
+  transition: 50ms;
 }
 .container .principal .botonera .bookmarked-sel .book-sel {
   display: none;
@@ -165,7 +163,7 @@ body {
   background-color: rgb(240, 239, 239);
 }
 .container .principal .botonera .bookmarked-sel img {
-  display: none;
+  display: flex;
 }
 .container .principal .botonera .bookmarked-sel .bookmarked {
   display: flex;
@@ -580,6 +578,36 @@ body {
   display: none;
 }
 
+@media screen and (min-width: 390px) {
+  .back-project .elegir .seleccionado hr {
+    width: 115%;
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 413px) {
+  .back-project .elegir .seleccionado hr {
+    width: 112%;
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 490px) {
+  .back-project .elegir .seleccionado hr {
+    width: 111%;
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 525px) {
+  .back-project .elegir .seleccionado hr {
+    width: 109%;
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .back-project .elegir .seleccionado hr {
+    width: 108%;
+    max-width: 640px;
+  }
+}
 @media screen and (min-width: 460px) {
   .container {
     margin-top: -100px;

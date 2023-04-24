@@ -13,7 +13,8 @@ let backSeccion = document.querySelector('.back-project');
 let selec = document.querySelectorAll('.selec')
 let alerta = document.querySelector('.alerta')
 let btnAbout = document.querySelectorAll('.btn-about');
-
+let bookmarkedTxt = document.querySelector ('.txt-book')
+let bookmarkContainer = document.querySelector('.bookmark')
 
 
 
@@ -39,6 +40,9 @@ botonBack.addEventListener('click', ()=>{
 cerrar.addEventListener('click', ()=>{
     cerrarBack()
 })
+
+
+
 
 ratio.forEach(btn => {
     btn.addEventListener('click', ()=>{
@@ -80,11 +84,14 @@ btnAbout.forEach(btn=>{
 
 function imagenbookON(){
     imagenbooked.style.display = 'flex';
-    bookImagen.style.display = 'none'
+    bookImagen.style.display = 'none';
+    bookmarkContainer.classList.add('bookmarked-sel')
+    
 }
 function imagenbookOFF(){
     imagenbooked.style.display = 'none';
-    bookImagen.style.display = 'flex'
+    bookImagen.style.display = 'flex';
+    bookmarkContainer.classList.remove('bookmarked-sel')
 }
 function abrirMenu(){
     menuMobile.style.display = 'flex';
